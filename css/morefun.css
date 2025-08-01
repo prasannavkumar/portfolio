@@ -1,0 +1,64 @@
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+.text {
+    background-color: #ffffff;
+    margin: 1rem;
+    color: #222222;
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.text:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: box-shadow 0.3s ease;
+}
+
+.herobanner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #fff8f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    margin: 2rem auto;
+
+}
+.herobanner img{
+        width: 280px;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+.section-title {
+  font-size: 1.5rem;    
+  color: #1f2937;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3b82f6; 
+  padding-left: 0.75rem;   
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .herobanner {
+        flex-direction: roq;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+  .herobanner img {
+    height: 240px;
+    width: auto;
+  }
+
+  .fun-intro-text {
+    padding: 1rem;
+  }
+}
