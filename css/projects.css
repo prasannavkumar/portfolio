@@ -1,7 +1,7 @@
 .projects-section {
     display: grid;
-    grid-template-rows: 1fr  3fr;
-    align-items: center;
+    align-items: start;
+    row-gap: 1.5rem;
     justify-items: center;
     
 }
@@ -99,26 +99,30 @@
     margin-bottom: 1rem;
     
 }
+.spotlight { padding-top: 0.5rem; 
+} 
+
 .spotlight-titles {
-    width: 100%;
     padding: 1.5rem 2rem;
     border-bottom: 1px solid lightblue;
 }
-
-.spotlight-titles h3 {
+h3.spotlight-titles { 
     margin: 0;
     font-size: 1.5rem;
     color: #111827;
     font-weight: 600;
 }
+
 .spotlight-card {
     display: flex;
     flex-direction: column;
 }
-.spotlight ul {
-    list-style: none;
-    width: fit-content;
-}
+.spotlight ul { list-style: none; 
+    margin: 0.5rem; 
+    justify-self: center;
+    padding: 0.5rem;
+     width: 90%; }
+
 .spotlight li {
     margin-top: 1rem;
 }
@@ -127,7 +131,7 @@
     color: #0369a1;
     font-size: 1rem;
     padding: 0.25rem 0.75rem;
-    border-radius: 9999px;  
+    border-radius: 12px;  
 }
 .spotlight-list-details {
     margin-top: 1rem;
@@ -136,7 +140,11 @@
 }
 .spotlight-list-details-description {
     display: flex;
+    margin-left: 1rem;
     flex-direction: column;
+}
+.spotlight-list-details-description-tech {
+    margin-left: 1rem;
 }
 .spotlight-list-details-description p{
     margin: 0;
@@ -144,7 +152,6 @@
 
 .spotlight-list-cards {
     display: flex;
-    grid-template-rows: 100px 2fr;
     justify-content: center;
     align-items: center;
     padding-top: 1rem;
@@ -173,3 +180,53 @@
 .spotlight.active {
   display: block;
 }
+.spotlight > :first-child { margin-top: 0; }
+
+.spotlight-summary {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 12px;
+    width: ;
+    background: #e0f2fe;
+    color: #0369a1;
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+}
+.spotlight-summary::-webkit-details-marker {
+    display: none;
+}
+.summary-text{
+    display: grid;
+    gap: 0.1rem;
+    padding: 0.25rem;
+}
+.summary-title{
+    margin:0;
+    font-size: 1rem;
+    color: #0369a1;
+}
+.summary-teaser{
+    margin:0.5rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.2;
+}
+.summary-tags { display: flex;
+     gap: 0.4rem;
+      flex-wrap: wrap; 
+      margin-top: 0.1rem; }
+.tag {
+  background: #dbeafe; color: #1e3a8a; font-size: 0.75rem;
+  padding: 0.15rem 0.5rem; border-radius: 9999px;
+}
+.chevron { transition: transform .2s ease; align-self: center;
+font-size: 1.5rem; }
+.spotlight-details[open] .chevron { 
+    transform: rotate(90deg); 
+}
+
+
